@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SubscribtionProperty<T> : IReadOnlySubscribtionProperty<T>
+namespace Tools
+{
+    public class SubscriptionProperty<T> : IReadOnlySubscriptionProperty<T>
 {
     private T _value;
     private Action<T> _onChangeValue;
@@ -22,8 +24,10 @@ public class SubscribtionProperty<T> : IReadOnlySubscribtionProperty<T>
         _onChangeValue += subscribeAction;
     }
 
-    public void UnSubscribeOnChange(Action<T> unSubscribeAction)
-    {
-        _onChangeValue += unSubscribeAction;
+        public void UnSubscriptionOnChange(Action<T> unSubscribeAction)
+        {
+            _onChangeValue -= unSubscribeAction;
+
+        }
     }
 }

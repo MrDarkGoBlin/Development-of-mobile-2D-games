@@ -1,4 +1,7 @@
-﻿public class ResourcePath 
+﻿namespace Tools
 {
-    public string PathResource;
+    public class ResourcePath
+    {
+        public string PathResource;
+    }
 }

@@ -64,18 +64,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Background.cs" />
     <Compile Include="Assets\Scripts\BaseController.cs" />
+    <Compile Include="Assets\Scripts\BaseInputView.cs" />
     <Compile Include="Assets\Scripts\Car.cs" />
     <Compile Include="Assets\Scripts\CarController.cs" />
     <Compile Include="Assets\Scripts\CarView.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GameState.cs" />
-    <Compile Include="Assets\Scripts\IReadOnlySubscribtionProperty.cs" />
+    <Compile Include="Assets\Scripts\GyroscopeInputView.cs" />
+    <Compile Include="Assets\Scripts\IReadOnlySubscriptionProperty.cs" />
+    <Compile Include="Assets\Scripts\InputAcceleration.cs" />
+    <Compile Include="Assets\Scripts\InputGameController.cs" />
+    <Compile Include="Assets\Scripts\InputJoystickView.cs" />
+    <Compile Include="Assets\Scripts\MainController.cs" />
     <Compile Include="Assets\Scripts\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\MainMenuView.cs" />
-    <Compile Include="Assets\Scripts\PlayerProfiler.cs" />
+    <Compile Include="Assets\Scripts\PlaceForUIView.cs" />
+    <Compile Include="Assets\Scripts\ProfilerPlayer.cs" />
     <Compile Include="Assets\Scripts\ResourceLoader.cs" />
     <Compile Include="Assets\Scripts\ResourcePath.cs" />
-    <Compile Include="Assets\Scripts\SubscribtionProperty.cs" />
+    <Compile Include="Assets\Scripts\Root.cs" />
+    <Compile Include="Assets\Scripts\SubscriptionProperty.cs" />
+    <Compile Include="Assets\Scripts\TapeBackgroundController.cs" />
+    <Compile Include="Assets\Scripts\TapeBackgroundView.cs" />
+    <Compile Include="Assets\Scripts\TrailController.cs" />
+    <Compile Include="Assets\Scripts\TrailView.cs" />
     <Compile Include="Assets\UpdateManager\Example Scene\Scripts\Cloner.cs" />
     <Compile Include="Assets\UpdateManager\Example Scene\Scripts\Counter.cs" />
     <Compile Include="Assets\UpdateManager\Example Scene\Scripts\ExampleEventUpdate.cs" />

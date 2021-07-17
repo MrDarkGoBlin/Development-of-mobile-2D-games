@@ -1,10 +1,13 @@
-﻿public class Car
+﻿namespace Profile
 {
-    public float Speed { get; }
-
-    public Car(float speed)
+    public class Car
     {
-        Speed = speed;
-    }
+        public float Speed { get; }
 
+        public Car(float speed)
+        {
+            Speed = speed;
+        }
+
+    }
 }
