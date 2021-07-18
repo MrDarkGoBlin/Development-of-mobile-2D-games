@@ -1,6 +1,7 @@
 ﻿using Profile;
 using Tools;
 using UnityEngine;
+using UnityEngine.Advertisements;
 
 namespace Ui
 {
@@ -17,6 +18,7 @@ namespace Ui
             _mainMenuView.Init(StartGame);
             var tralController = new TrailController();
             AddController(tralController);
+            Advertisement.AddListener(_playerProfiler.AdsListener);
         }
 
         private MainMenuView LoadView(Transform placeForUI)
@@ -30,11 +32,15 @@ namespace Ui
         private void StartGame()
         {
             _playerProfiler.CurrentState.Value = GameState.Game;
+            _playerProfiler.AnaliticsTools.SendMessage("Start", ("time" , Time.realtimeSinceStartup));
+            _playerProfiler.AdsShower.ShowInterstitialVideo();
         }
 
         protected override void OnDispose()
         {
             _playerProfiler.CurrentState.Value = GameState.Game;
+
+            Advertisement.RemoveListener(_playerProfiler.AdsListener);
 
             base.OnDispose();
         }

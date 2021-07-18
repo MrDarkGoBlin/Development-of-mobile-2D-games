@@ -688,6 +688,15 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>R:/Projects/Development-of-mobile-2D-games/Development-of-mobile-2D-games/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Monetization">
+      <HintPath>R:/Projects/Development-of-mobile-2D-games/Development-of-mobile-2D-games/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>R:/Projects/Development-of-mobile-2D-games/Development-of-mobile-2D-games/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements.Editor">
+      <HintPath>R:/Projects/Development-of-mobile-2D-games/Development-of-mobile-2D-games/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

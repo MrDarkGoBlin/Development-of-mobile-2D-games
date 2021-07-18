@@ -64,6 +64,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ADS\IAdsShower.cs" />
+    <Compile Include="Assets\Scripts\ADS\UnityAdsTools.cs" />
+    <Compile Include="Assets\Scripts\Analitics\IAnaliticsTools.cs" />
+    <Compile Include="Assets\Scripts\Analitics\UnityAnaliticsTools.cs" />
     <Compile Include="Assets\Scripts\Background.cs" />
     <Compile Include="Assets\Scripts\BaseController.cs" />
     <Compile Include="Assets\Scripts\BaseInputView.cs" />
@@ -710,6 +714,15 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>R:/Projects/Development-of-mobile-2D-games/Development-of-mobile-2D-games/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Monetization">
+      <HintPath>R:/Projects/Development-of-mobile-2D-games/Development-of-mobile-2D-games/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>R:/Projects/Development-of-mobile-2D-games/Development-of-mobile-2D-games/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements.Editor">
+      <HintPath>R:/Projects/Development-of-mobile-2D-games/Development-of-mobile-2D-games/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
