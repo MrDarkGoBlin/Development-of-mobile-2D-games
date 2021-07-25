@@ -317,6 +317,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _placeForUi: {fileID: 1306481675}
+  _itemsConfig:
+  - {fileID: 11400000, guid: 68034a3d9a64be743aea2e9a59c3787c, type: 2}
+  - {fileID: 11400000, guid: 1f71d4f581053f244af4354a1cc09019, type: 2}
+  _upgradeItemsConfig:
+  - {fileID: 11400000, guid: d172d4c4daf938e4b91eab633bc47278, type: 2}
+  - {fileID: 11400000, guid: ca0308e22d23fcb4380d7da8cbffb286, type: 2}
 --- !u!1 &1306481674
 GameObject:
   m_ObjectHideFlags: 0

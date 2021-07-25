@@ -1,26 +1,31 @@
 ﻿using Profile;
 using Ui;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MainController : BaseController
 {
-    public MainController(Transform placeForUi, ProfilerPlayer profilePlayer)
+    public MainController(Transform placeForUi, ProfilerPlayer profilePlayer, List<ItemConfig> itemsConfig, List<UpgradeItemConfig> _upgradeItemsConfig)
     {
         _profilePlayer = profilePlayer;
         _placeForUi = placeForUi;
         OnChangeGameState(_profilePlayer.CurrentState.Value);
         profilePlayer.CurrentState.SubscribeOnChange(OnChangeGameState);
+        _itemsConfig = itemsConfig;
+        _upgradeItemsConfig = _upgradeItemsConfig;
     }
 
     private MainMenuController _mainMenuController;
     private GameController _gameController;
+    private ShedController _shedController;
     private readonly Transform _placeForUi;
     private readonly ProfilerPlayer _profilePlayer;
+    private readonly List<ItemConfig> _itemsConfig;
+    private readonly List<UpgradeItemConfig> _upgradeItemsConfig;
 
     protected override void OnDispose()
     {
-        _mainMenuController?.Dispose();
-        _gameController?.Dispose();
+        AllClear();
         _profilePlayer.CurrentState.UnSubscriptionOnChange(OnChangeGameState);
         base.OnDispose();
     }
@@ -34,6 +39,8 @@ public class MainController : BaseController
                 _gameController?.Dispose();
                 break;
             case GameState.Game:
+                _shedController = new ShedController(_upgradeItemsConfig, _profilePlayer.CurrentCar);
+
                 _gameController = new GameController(_profilePlayer);
                 _mainMenuController?.Dispose();
                 break;
@@ -42,5 +49,12 @@ public class MainController : BaseController
                 _gameController?.Dispose();
                 break;
         }
+    }
+
+    private void AllClear()
+    {
+        _shedController?.Dispose();
+        _mainMenuController?.Dispose();
+        _gameController?.Dispose();
     }
 }

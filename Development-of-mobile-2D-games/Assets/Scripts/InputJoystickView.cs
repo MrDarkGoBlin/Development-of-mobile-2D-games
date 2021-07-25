@@ -10,7 +10,7 @@ namespace Game.InputLogic
         public override void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, float speed)
         {
             base.Init(leftMove, rightMove, speed);
-            transform.position = FindObjectOfType<PlaceForUIView>().transform.position;
+            transform.position = FindObjectOfType<PlaceForUIView>().transform.position; // происходит при создании так дороговизно операции можно пренибреч(наверно=))
             UpdateManager.SubscribeToUpdate(Move);
         }
         private void OnDestroy()

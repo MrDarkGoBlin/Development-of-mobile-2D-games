@@ -6,19 +6,17 @@ public class TrailController : BaseController
 {
     private readonly ResourcePath _viewPath = new ResourcePath() { PathResource = "Prefabs/Trail" };
     private TrailView _trailView;
-    private TrailRenderer _trailRenderer;
     private Camera _mainCamera;
     private Vector3 _setPosition;
     private bool _stateMouse;
     public TrailController()
     {
         _trailView = LoadView();
-        _trailRenderer = _trailView.GetComponent<TrailRenderer>();
         UpdateManager.SubscribeToUpdate(Move);
         _mainCamera = Camera.main;
     }
 
-    private void OnDestroy()
+    protected override void OnDispose()
     {
         UpdateManager.UnsubscribeFromUpdate(Move);
         base.OnDispose();
@@ -52,4 +50,6 @@ public class TrailController : BaseController
 
         return objectMainMenu.GetComponent<TrailView>();
     }
+
+
 }
