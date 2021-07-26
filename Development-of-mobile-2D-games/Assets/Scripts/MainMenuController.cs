@@ -16,8 +16,8 @@ namespace Ui
             _playerProfiler = playerProfiler;
             _mainMenuView = LoadView(placeForUI);
             _mainMenuView.Init(StartGame);
-            var tralController = new TrailController();
-            AddController(tralController);
+            var trarlController = new TrailController();
+            AddController(trarlController);
             Advertisement.AddListener(_playerProfiler.AdsListener);
         }
 
