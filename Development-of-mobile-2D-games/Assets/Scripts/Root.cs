@@ -13,6 +13,8 @@ public class Root : MonoBehaviour
     private List<ItemConfig> _itemsConfig;
     [SerializeField]
     private List<UpgradeItemConfig> _upgradeItemsConfig;
+    [SerializeField]
+    private List<AbilityItemConfig> _abilityItemsConfig;
 
     private MainController _mainController;
 
@@ -21,7 +23,7 @@ public class Root : MonoBehaviour
         _unityAdsTools = new UnityAdsTools();
         var profilePlayer = new ProfilerPlayer(15f, _unityAdsTools);
         profilePlayer.CurrentState.Value = GameState.Start;
-        _mainController = new MainController(_placeForUi, profilePlayer, _itemsConfig, _upgradeItemsConfig);
+        _mainController = new MainController(_placeForUi, profilePlayer, _itemsConfig, _upgradeItemsConfig, _abilityItemsConfig);
     }
 
     protected void OnDestroy()

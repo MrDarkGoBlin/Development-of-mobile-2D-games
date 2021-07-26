@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class OilAbility : IAbility
 {
-    private readonly GameObject _view; //необходимо сделать префаб масла
     private Car _car;
+    private AbilityItemConfig _abilityItemConfig;
     private Vector3 _move;
     private float _timeToDeath;
+    private GameObject _ablilityObject; // сделать отдельный клас для viewAbility
 
 
     public OilAbility(AbilityItemConfig abilityItemConfig, Car car)
     {
         _timeToDeath = abilityItemConfig.value;
-        _view = abilityItemConfig.view;
         _car = car;
+    }
+    public void Init(AbilitiesController abilitiesController, ButtonAbility buttonAbility)
+    {
+        buttonAbility.Init(_abilityItemConfig.type, abilitiesController, _abilityItemConfig.imageAbility);
     }
     public void Apply(IAbilityActivator activator)
     {
-        var objectOil = Object.Instantiate(_view, activator.GetViewObject().transform);
+        _ablilityObject = Object.Instantiate(_abilityItemConfig.view, activator.GetViewObject().transform);
         UpdateManager.SubscribeToUpdate(TimerToDeath);
         _move = activator.GetViewObject().transform.position;
     }
@@ -31,6 +35,6 @@ public class OilAbility : IAbility
         }
         _timeToDeath -= Time.deltaTime;
         _move.x -= _car.Speed;
-        _view.transform.position = _move;
+        _ablilityObject.transform.position = _move;
     }
 }

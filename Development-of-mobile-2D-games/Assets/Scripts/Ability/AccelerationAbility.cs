@@ -5,15 +5,23 @@ using UnityEngine;
 public class AccelerationAbility : IAbility
 {
     private Car _car;
+    private AbilityItemConfig _abilityItemConfig;
     private float _speed;
     private float _timeToDeath;
+    private AbilityType _abilityType;
     public AccelerationAbility(Car car, AbilityItemConfig abilityItemConfig)
     {
         if (abilityItemConfig.type != AbilityType.Acceleration)
             return;
 
+        _abilityType = abilityItemConfig.type;
         _car = car;        
         _speed = abilityItemConfig.value;
+    }
+
+    public void Init(AbilitiesController abilitiesController, ButtonAbility buttonAbility)
+    {
+        buttonAbility.Init(_abilityType, abilitiesController, _abilityItemConfig.imageAbility);
     }
     public void Apply(IAbilityActivator activator)
     {

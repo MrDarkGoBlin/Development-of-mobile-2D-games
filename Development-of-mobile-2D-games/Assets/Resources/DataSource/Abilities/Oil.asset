@@ -15,4 +15,6 @@ MonoBehaviour:
   itemConfig: {fileID: 11400000, guid: 96975e97033745a439d8d685bdb92a9d, type: 2}
   view: {fileID: 0}
   type: 3
+  imageAbility: {fileID: 2176717813285414306, guid: 1da5758aa67e67f4780c427879d4642a,
+    type: 3}
   value: 4

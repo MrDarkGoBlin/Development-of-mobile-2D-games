@@ -323,6 +323,7 @@ MonoBehaviour:
   _upgradeItemsConfig:
   - {fileID: 11400000, guid: d172d4c4daf938e4b91eab633bc47278, type: 2}
   - {fileID: 11400000, guid: ca0308e22d23fcb4380d7da8cbffb286, type: 2}
+  _abilityItemsConfig: []
 --- !u!1 &1306481674
 GameObject:
   m_ObjectHideFlags: 0

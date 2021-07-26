@@ -67,8 +67,10 @@
     <Compile Include="Assets\Scripts\ADS\IAdsShower.cs" />
     <Compile Include="Assets\Scripts\ADS\UnityAdsTools.cs" />
     <Compile Include="Assets\Scripts\Ability\AbilitiesController.cs" />
+    <Compile Include="Assets\Scripts\Ability\AbilityCollectionView.cs" />
     <Compile Include="Assets\Scripts\Ability\AbilityItemConfig.cs" />
     <Compile Include="Assets\Scripts\Ability\AccelerationAbility.cs" />
+    <Compile Include="Assets\Scripts\Ability\ButtonAbility.cs" />
     <Compile Include="Assets\Scripts\Ability\GunAbility.cs" />
     <Compile Include="Assets\Scripts\Ability\IAbility.cs" />
     <Compile Include="Assets\Scripts\Ability\IAbilityCollectionView.cs" />

@@ -26,4 +26,8 @@ public class GunAbility : IAbility
         projectile.AddForce(activator.GetViewObject().transform.right * _projectileSpeed, ForceMode2D.Force);
     }
 
+    public void Init(AbilitiesController abilitiesController, ButtonAbility buttonAbility)
+    {
+        
+    }
 }

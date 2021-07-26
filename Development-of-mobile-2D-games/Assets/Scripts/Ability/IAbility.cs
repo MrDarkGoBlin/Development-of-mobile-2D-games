@@ -5,6 +5,8 @@ public interface IAbility
 {
     void Apply(IAbilityActivator activator);
 
+    void Init(AbilitiesController abilitiesController, ButtonAbility buttonAbility);
+
 }
 public interface IAbilityActivator
 {
