@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryView : IInventoryView
+public class InventoryView : MonoBehaviour, IInventoryView
 {
     private List<IItem> _itemInfoCollection;
 
@@ -11,12 +11,12 @@ public class InventoryView : IInventoryView
 
     public void Show()
     {
-
+        gameObject.SetActive(true);
     }
 
     public void Hide()
     {
-
+        gameObject.SetActive(false);
     }
     
     public void Display(List<IItem> items)
