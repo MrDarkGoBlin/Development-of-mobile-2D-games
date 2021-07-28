@@ -3,9 +3,9 @@ using UnityEngine.Advertisements;
 
 namespace Profile
 {
-    public class ProfilerPlayer
+    public class ProfilePlayer
     {
-        public ProfilerPlayer(float speed, UnityAdsTools unityAdsTools)
+        public ProfilePlayer(float speed, UnityAdsTools unityAdsTools)
         {
             CurrentState = new SubscriptionProperty<GameState>();
             CurrentCar = new Car(speed);

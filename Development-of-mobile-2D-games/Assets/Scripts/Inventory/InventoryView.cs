@@ -2,13 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryView : IInventoryView
+public class InventoryView : MonoBehaviour, IInventoryView
 {
+    private List<IItem> _itemInfoCollection;
+
     public event EventHandler<IItem> Selected;
     public event EventHandler<IItem> Deselected;
 
+    public void Show()
+    {
+        gameObject.SetActive(true);
+    }
 
-    private List<IItem> _itemInfoCollection;
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+    }
+    
     public void Display(List<IItem> items)
     {
         _itemInfoCollection = items;

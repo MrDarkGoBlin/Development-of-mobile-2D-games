@@ -69,6 +69,8 @@
     <Compile Include="Assets\Scripts\Ability\AbilitiesController.cs" />
     <Compile Include="Assets\Scripts\Ability\AbilityCollectionView.cs" />
     <Compile Include="Assets\Scripts\Ability\AbilityItemConfig.cs" />
+    <Compile Include="Assets\Scripts\Ability\AbilityItemConfigDataSource.cs" />
+    <Compile Include="Assets\Scripts\Ability\AbilityRepository.cs" />
     <Compile Include="Assets\Scripts\Ability\AccelerationAbility.cs" />
     <Compile Include="Assets\Scripts\Ability\ButtonAbility.cs" />
     <Compile Include="Assets\Scripts\Ability\GunAbility.cs" />
@@ -80,9 +82,12 @@
     <Compile Include="Assets\Scripts\Background.cs" />
     <Compile Include="Assets\Scripts\BaseController.cs" />
     <Compile Include="Assets\Scripts\BaseInputView.cs" />
+    <Compile Include="Assets\Scripts\BaseView\IRepository.cs" />
+    <Compile Include="Assets\Scripts\BaseView\IView.cs" />
     <Compile Include="Assets\Scripts\Car.cs" />
     <Compile Include="Assets\Scripts\CarController.cs" />
     <Compile Include="Assets\Scripts\CarView.cs" />
+    <Compile Include="Assets\Scripts\Controllers\ContentDataSourceLoader.cs" />
     <Compile Include="Assets\Scripts\Data\ItemConfig.cs" />
     <Compile Include="Assets\Scripts\Data\UpgradeItemConfig.cs" />
     <Compile Include="Assets\Scripts\Data\UpgradeItemConfigDataSource.cs" />
@@ -95,9 +100,9 @@
     <Compile Include="Assets\Scripts\InputAcceleration.cs" />
     <Compile Include="Assets\Scripts\InputGameController.cs" />
     <Compile Include="Assets\Scripts\InputJoystickView.cs" />
+    <Compile Include="Assets\Scripts\Inventory\IInventoryController.cs" />
     <Compile Include="Assets\Scripts\Inventory\IInventoryModel.cs" />
     <Compile Include="Assets\Scripts\Inventory\IInventoryView.cs" />
-    <Compile Include="Assets\Scripts\Inventory\IInvetnoryController.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryController.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryModel.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryView.cs" />
@@ -110,7 +115,7 @@
     <Compile Include="Assets\Scripts\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\MainMenuView.cs" />
     <Compile Include="Assets\Scripts\PlaceForUIView.cs" />
-    <Compile Include="Assets\Scripts\ProfilerPlayer.cs" />
+    <Compile Include="Assets\Scripts\ProfilePlayer.cs" />
     <Compile Include="Assets\Scripts\ResourceLoader.cs" />
     <Compile Include="Assets\Scripts\ResourcePath.cs" />
     <Compile Include="Assets\Scripts\Root.cs" />
@@ -119,7 +124,7 @@
     <Compile Include="Assets\Scripts\TapeBackgroundView.cs" />
     <Compile Include="Assets\Scripts\TrailController.cs" />
     <Compile Include="Assets\Scripts\TrailView.cs" />
-    <Compile Include="Assets\Scripts\Upgrades\IUpgradeCarHandler.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\IUpgradeHandler.cs" />
     <Compile Include="Assets\Scripts\Upgrades\SpeedUpgradeCarHandler.cs" />
     <Compile Include="Assets\Scripts\Upgrades\StubUpgradeCarHandler.cs" />
     <Compile Include="Assets\Scripts\Upgrades\UpgradeHandlersRepository.cs" />

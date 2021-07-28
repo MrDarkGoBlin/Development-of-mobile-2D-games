@@ -7,72 +7,57 @@ using Tools;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-public class AbilitiesController : BaseController
+public class AbilitiesController : BaseController , IAbilitiesController
 {
-    private readonly ResourcePath _viewPath = new ResourcePath() { PathResource = "Prefabs/AbilitiView" };
+    //private readonly ResourcePath _viewPath = new ResourcePath() { PathResource = "Prefabs/AbilitiView" };
+    //private readonly IInventoryModel _inventoryModel;
+    //private readonly IAbilityRepository _abilityRepository;
+    //private readonly AbilityCollectionView _abilityCollectionView;
+    //private readonly IAbilityActivator _abilityActivator;
+    //private readonly IAbility _accelerationAbility;
+    //private readonly IAbility _oilAbility;
+    //private readonly IAbility _cannonAbility;
+    private readonly IRepository<int, IAbility> _abilityRepository;
     private readonly IInventoryModel _inventoryModel;
-    private readonly IAbilityRepository _abilityRepository;
-    private readonly AbilityCollectionView _abilityCollectionView;
-    private readonly IAbilityActivator _abilityActivator;
-    private readonly IAbility _accelerationAbility;
-    private readonly IAbility _oilAbility;
-    private readonly IAbility _cannonAbility;
+    private readonly IAbilityCollectionView _abilityCollectionView;
+    private readonly IAbilityActivator _carController;
 
     public AbilitiesController(
-        [NotNull] IAbilityActivator abilityActivator,
+        [NotNull] IRepository<int, IAbility> abilityRepository,
         [NotNull] IInventoryModel inventoryModel,
-        [NotNull] IAbilityRepository abilityRepository,
-        Car car, AbilityItemConfig accelerationAbility,
-        AbilityItemConfig oilAbility,
-        AbilityItemConfig cannonAbility,
-        Transform placeForUI
-        )
+        [NotNull] IAbilityCollectionView abilityCollectionView,
+        [NotNull] IAbilityActivator abilityActivator)
     {
-        _abilityActivator = abilityActivator ?? throw new ArgumentNullException(nameof(abilityActivator));
+        _carController = abilityActivator ?? throw new ArgumentNullException(nameof(abilityActivator));
         _inventoryModel = inventoryModel ?? throw new ArgumentNullException(nameof(inventoryModel));
         _abilityRepository = abilityRepository ?? throw new ArgumentNullException(nameof(abilityRepository));
-        _abilityCollectionView = LoadView(placeForUI);
-        _accelerationAbility = new AccelerationAbility(car, accelerationAbility);
-        _oilAbility = new OilAbility(oilAbility, car);
-        _cannonAbility = new AccelerationAbility(car, cannonAbility);
+        _abilityCollectionView = abilityCollectionView ?? throw new ArgumentNullException(nameof(abilityCollectionView));
+
+        SetupView(_abilityCollectionView);
+
     }
 
-    
-
-    private AbilityCollectionView LoadView(Transform placeForUI)
+    private void SetupView(IAbilityCollectionView view)
     {
-        var objectAbilitiesView = Object.Instantiate(ResourceLoader.LoadPrefabs(_viewPath), placeForUI);
-        AddGameObject(objectAbilitiesView);
-
-        return objectAbilitiesView.GetComponent<AbilityCollectionView>();
+        view.UseRequested += OnAbilityUseRequested;
     }
-    public void AbilityInit(AbilitiesController abilitiesController)
+    private void CleanupView(AbilityCollectionView view)
     {
-        foreach (var item in _abilityCollectionView.ButtonsAbility)
+        view.UseRequested -= OnAbilityUseRequested;
+    }
+
+    private void OnAbilityUseRequested(object sender, IItem e)
+    {
+        if (_abilityRepository.Collection.TryGetValue(e.Id, out var ability))
         {
-            _accelerationAbility.Init(abilitiesController, item);
+            ability.Apply(_carController);
         }
 
     }
-
-
-    public void AbilityActive(AbilityType abilityID)
+       
+    public void ShowAbilities()
     {
-        switch (abilityID)
-        {
-            case AbilityType.None:
-                break;
-            case AbilityType.Gun:
-                _cannonAbility.Apply(_abilityActivator);
-                break;
-            case AbilityType.Acceleration:
-                _accelerationAbility.Apply(_abilityActivator);
-                break;
-            case AbilityType.Oil:
-                _oilAbility.Apply(_abilityActivator);
-                break;
-            default:
-                break;
-        }
+        _abilityCollectionView.Show();
+        _abilityCollectionView.Display(_inventoryModel.GetEquippedItems());
     }
 }

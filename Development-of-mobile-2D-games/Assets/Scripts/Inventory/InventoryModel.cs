@@ -2,25 +2,26 @@
 
 public class InventoryModel : IInventoryModel
 {
-    private readonly List<IItem> _items = new List<IItem>();
+    private readonly IReadOnlyList<IItem> _subCollection = new List<IItem>();
+    private readonly List<IItem> _equippedItems = new List<IItem>();
 
-    public List<IItem> GetEquippedItems()
+    public IReadOnlyList<IItem> GetEquippedItems()
     {
-        return _items;
+        return _equippedItems ?? _subCollection;
     }
     public void EquippedItem(IItem item)
     {
-        if (_items.Contains(item))
+        if (_equippedItems.Contains(item))
             return;
 
-        _items.Add(item);
+        _equippedItems.Add(item);
     }
 
-    public void UnEquippedItem(IItem item)
+    public void UnequippedItem(IItem item)
     {
-        if(!_items.Contains(item))
+        if(!_equippedItems.Contains(item))
             return;
 
-        _items.Remove(item);
+        _equippedItems.Remove(item);
     }
 }

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IUpgradeCarHandler 
+public interface IUpgradeHandler 
 {
-    IUpgradableCar Upgrade(IUpgradableCar upgradableCar);
+    IUpgradable Upgrade(IUpgradable upgradableCar);
 }
-public interface IUpgradableCar
+public interface IUpgradable
 {
     float Speed { get; set; }
     void Restore();

@@ -1,8 +1,8 @@
-﻿public class StubUpgradeCarHandler : IUpgradeCarHandler
+﻿public class StubUpgradeCarHandler : IUpgradeHandler
 {
-    public static readonly IUpgradeCarHandler Default = new StubUpgradeCarHandler();
+    public static readonly IUpgradeHandler Default = new StubUpgradeCarHandler();
 
-    public IUpgradableCar Upgrade(IUpgradableCar upgradableCar)
+    public IUpgradable Upgrade(IUpgradable upgradableCar)
     {
         return upgradableCar;
     }

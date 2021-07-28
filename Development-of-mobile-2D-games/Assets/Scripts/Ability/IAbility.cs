@@ -17,4 +17,10 @@ public interface IAbilityRepository
     IReadOnlyDictionary<int, IAbility> AbilityMapByItemId { get; }
 }
 
+public interface IAbilitiesController
+{
+    void ShowAbilities();
+}
+
+
 

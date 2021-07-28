@@ -2,24 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgradeHandlersRepository : BaseController
+public class UpgradeHandlersRepository : IRepository<int, IUpgradeHandler>
 {
-    public IReadOnlyDictionary<int,IUpgradeCarHandler> UpgradeItems => _upgradeItemsMapById;
-    private Dictionary<int, IUpgradeCarHandler> _upgradeItemsMapById = new Dictionary<int, IUpgradeCarHandler>();
+    private Dictionary<int, IUpgradeHandler> _upgradeItemsMapById = new Dictionary<int, IUpgradeHandler>();
+
+
+    public IReadOnlyDictionary<int, IUpgradeHandler> Collection => _upgradeItemsMapById;
 
     public UpgradeHandlersRepository(List<UpgradeItemConfig> upgradeItemConfigs)
     {
         PopulateItems(ref _upgradeItemsMapById, upgradeItemConfigs);
     }
 
-    protected override void OnDispose()
-    {
-        _upgradeItemsMapById.Clear();
-        _upgradeItemsMapById = null;
-        
-    }
 
-    private void PopulateItems(ref Dictionary<int, IUpgradeCarHandler> upgradeHandlersMapByType,
+    private void PopulateItems(ref Dictionary<int, IUpgradeHandler> upgradeHandlersMapByType,
         List<UpgradeItemConfig> configs)
     {
         foreach (var config in configs)
@@ -29,7 +25,7 @@ public class UpgradeHandlersRepository : BaseController
         }
     }
 
-    private IUpgradeCarHandler CreateHandlerByType(UpgradeItemConfig config)
+    private IUpgradeHandler CreateHandlerByType(UpgradeItemConfig config)
     {
         switch (config.UpgradeType)
         {

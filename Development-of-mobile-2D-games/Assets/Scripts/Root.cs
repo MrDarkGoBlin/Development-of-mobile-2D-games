@@ -21,9 +21,9 @@ public class Root : MonoBehaviour
     private void Awake()
     {
         _unityAdsTools = new UnityAdsTools();
-        var profilePlayer = new ProfilerPlayer(15f, _unityAdsTools);
+        var profilePlayer = new ProfilePlayer(15f, _unityAdsTools);
         profilePlayer.CurrentState.Value = GameState.Start;
-        _mainController = new MainController(_placeForUi, profilePlayer, _itemsConfig, _upgradeItemsConfig, _abilityItemsConfig);
+        _mainController = new MainController(_placeForUi, profilePlayer);
     }
 
     protected void OnDestroy()
