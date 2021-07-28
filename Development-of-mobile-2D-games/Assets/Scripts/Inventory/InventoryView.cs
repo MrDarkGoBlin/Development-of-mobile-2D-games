@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class InventoryView : IInventoryView
 {
+    private List<IItem> _itemInfoCollection;
+
     public event EventHandler<IItem> Selected;
     public event EventHandler<IItem> Deselected;
 
+    public void Show()
+    {
 
-    private List<IItem> _itemInfoCollection;
+    }
+
+    public void Hide()
+    {
+
+    }
+    
     public void Display(List<IItem> items)
     {
         _itemInfoCollection = items;

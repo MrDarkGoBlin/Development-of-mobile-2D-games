@@ -1,13 +1,32 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class AbilityCollectionView : MonoBehaviour
+public class AbilityCollectionView : MonoBehaviour, IAbilityCollectionView
 {
-    [SerializeField]
-    private List<ButtonAbility> _buttonsAbility;
+    private IReadOnlyList<IItem> _abilityItems;
+
+    protected virtual void OnUseRequested(IItem e)
+    {
+        UseRequested?.Invoke(this, e);
+    }
+    public event EventHandler<IItem> UseRequested;
+
+    public void Display(IReadOnlyList<IItem> abilityItems)
+    {
+        _abilityItems = abilityItems;
+    }
+
+    public void Hide()
+    {
         
-    public List<ButtonAbility> ButtonsAbility => _buttonsAbility;
+    }
+
+    public void Show()
+    {
+        
+    }
 }

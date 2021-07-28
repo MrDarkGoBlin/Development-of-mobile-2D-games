@@ -1,16 +1,18 @@
 ﻿using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-public class InventoryController : BaseController, IInvetnoryController
+public class InventoryController : BaseController, IInventoryController
 {
     private readonly IInventoryModel _inventoryModel;
     private readonly IInventoryView _inventoryView;
-    private readonly IItemsRepository _itemsRepository;
+    private readonly IRepository<int, IItem> _itemsRepository;
+    private Action _hideAction;
 
     public InventoryController(
        [NotNull] IInventoryModel inventoryModel,
-       [NotNull] IItemsRepository itemsRepository,
+       [NotNull] IRepository<int, IItem> itemsRepository,
        [NotNull] IInventoryView inventoryView
         )
     {
@@ -20,18 +22,48 @@ public class InventoryController : BaseController, IInvetnoryController
 
     }
 
-
-
-    public void ShowInventory()
+    protected override void OnDispose()
     {
-        foreach (var item in _itemsRepository.Items.Values)
-            _inventoryModel.EquippedItem(item);
+        CleanupView();
+        base.OnDispose();
+    }
 
-        var equippedItems = _inventoryModel.GetEquippedItems();
-        _inventoryView.Display(equippedItems);
+    public IReadOnlyList<IItem> GetEqueppendItems()
+    {
+        return _inventoryModel.GetEquippedItems();
+    }
+
+    public void ShowInventory(Action hideAction)
+    {
+        _hideAction = hideAction;
+        _inventoryView.Show();
+        _inventoryView.Display(_itemsRepository.Collection.Values.ToList());
     }
     public void HideInventory()
     {
-        
+        _inventoryView.Hide();
+        _hideAction?.Invoke();
     }
+
+    private void SetupView(IInventoryView inventoryView)
+    {
+        inventoryView.Selected += OnItemSelected;
+        inventoryView.Deselected += OnItemDeSelected;
+    }
+
+    private void CleanupView() 
+    {
+        _inventoryView.Selected -= OnItemSelected;
+        _inventoryView.Deselected -= OnItemDeSelected;
+    }
+
+    private void OnItemSelected(object sender, IItem item)
+    {
+        _inventoryModel.EquippedItem(item);
+    }
+    private void OnItemDeSelected(object sender, IItem item)
+    {
+        _inventoryModel.UnequippedItem(item);
+    }
+
 }
