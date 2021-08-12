@@ -64,8 +64,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ADS\IAdsShower.cs" />
-    <Compile Include="Assets\Scripts\ADS\UnityAdsTools.cs" />
     <Compile Include="Assets\Scripts\Ability\AbilitiesController.cs" />
     <Compile Include="Assets\Scripts\Ability\AbilityCollectionView.cs" />
     <Compile Include="Assets\Scripts\Ability\AbilityItemConfig.cs" />
@@ -77,29 +75,41 @@
     <Compile Include="Assets\Scripts\Ability\IAbility.cs" />
     <Compile Include="Assets\Scripts\Ability\IAbilityCollectionView.cs" />
     <Compile Include="Assets\Scripts\Ability\OilAbility.cs" />
+    <Compile Include="Assets\Scripts\Ads\IAdsShower.cs" />
+    <Compile Include="Assets\Scripts\Ads\UnityAdsTools.cs" />
     <Compile Include="Assets\Scripts\Analitics\IAnaliticsTools.cs" />
     <Compile Include="Assets\Scripts\Analitics\UnityAnaliticsTools.cs" />
-    <Compile Include="Assets\Scripts\Background.cs" />
-    <Compile Include="Assets\Scripts\BaseController.cs" />
-    <Compile Include="Assets\Scripts\BaseInputView.cs" />
     <Compile Include="Assets\Scripts\BaseView\IRepository.cs" />
     <Compile Include="Assets\Scripts\BaseView\IView.cs" />
-    <Compile Include="Assets\Scripts\Car.cs" />
-    <Compile Include="Assets\Scripts\CarController.cs" />
-    <Compile Include="Assets\Scripts\CarView.cs" />
     <Compile Include="Assets\Scripts\Controllers\ContentDataSourceLoader.cs" />
     <Compile Include="Assets\Scripts\Data\ItemConfig.cs" />
     <Compile Include="Assets\Scripts\Data\UpgradeItemConfig.cs" />
     <Compile Include="Assets\Scripts\Data\UpgradeItemConfigDataSource.cs" />
-    <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Scripts\GameState.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\ATB\DataPlayer.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\ATB\DataType.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\ATB\Enemy.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\ATB\FightWindowController.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\ATB\FightWindowView.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\ATB\IEnemy.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\ATB\StartFightController.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\ATB\StartFightView.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Daily\ContainerSlotRewardView.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Daily\CurrencyController.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Daily\CurrencyView.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Daily\DailyRewardController.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Daily\DailyRewardView.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Daily\Reward.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Daily\RewardType.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Daily\RootView.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Daily\Saveinformation.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Daily\TimerInterpritator.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Tween\AnimationButtonType.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Tween\CustomButton.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Tween\CustomSlider.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Tween\MainWindowView.cs" />
+    <Compile Include="Assets\Scripts\ExternalData\Tween\PopupView.cs" />
     <Compile Include="Assets\Scripts\Garage\IShedController.cs" />
     <Compile Include="Assets\Scripts\Garage\ShedController.cs" />
-    <Compile Include="Assets\Scripts\GyroscopeInputView.cs" />
-    <Compile Include="Assets\Scripts\IReadOnlySubscriptionProperty.cs" />
-    <Compile Include="Assets\Scripts\InputAcceleration.cs" />
-    <Compile Include="Assets\Scripts\InputGameController.cs" />
-    <Compile Include="Assets\Scripts\InputJoystickView.cs" />
     <Compile Include="Assets\Scripts\Inventory\IInventoryController.cs" />
     <Compile Include="Assets\Scripts\Inventory\IInventoryModel.cs" />
     <Compile Include="Assets\Scripts\Inventory\IInventoryView.cs" />
@@ -111,23 +121,36 @@
     <Compile Include="Assets\Scripts\Item\Item.cs" />
     <Compile Include="Assets\Scripts\Item\ItemInfo.cs" />
     <Compile Include="Assets\Scripts\Item\ItemsRepository.cs" />
-    <Compile Include="Assets\Scripts\MainController.cs" />
-    <Compile Include="Assets\Scripts\MainMenuController.cs" />
-    <Compile Include="Assets\Scripts\MainMenuView.cs" />
-    <Compile Include="Assets\Scripts\PlaceForUIView.cs" />
-    <Compile Include="Assets\Scripts\ProfilePlayer.cs" />
-    <Compile Include="Assets\Scripts\ResourceLoader.cs" />
-    <Compile Include="Assets\Scripts\ResourcePath.cs" />
-    <Compile Include="Assets\Scripts\Root.cs" />
-    <Compile Include="Assets\Scripts\SubscriptionProperty.cs" />
-    <Compile Include="Assets\Scripts\TapeBackgroundController.cs" />
-    <Compile Include="Assets\Scripts\TapeBackgroundView.cs" />
-    <Compile Include="Assets\Scripts\TrailController.cs" />
-    <Compile Include="Assets\Scripts\TrailView.cs" />
     <Compile Include="Assets\Scripts\Upgrades\IUpgradeHandler.cs" />
     <Compile Include="Assets\Scripts\Upgrades\SpeedUpgradeCarHandler.cs" />
     <Compile Include="Assets\Scripts\Upgrades\StubUpgradeCarHandler.cs" />
     <Compile Include="Assets\Scripts\Upgrades\UpgradeHandlersRepository.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\Background.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\BaseController.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\BaseInputView.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\Car.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\CarController.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\CarView.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\GameState.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\GyroscopeInputView.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\IReadOnlySubscriptionProperty.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\InputAcceleration.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\InputGameController.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\InputJoystickView.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\MainController.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\MainMenuController.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\MainMenuView.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\PlaceForUIView.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\ProfilePlayer.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\ResourceLoader.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\ResourcePath.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\Root.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\SubscriptionProperty.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\TapeBackgroundController.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\TapeBackgroundView.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\TrailController.cs" />
+    <Compile Include="Assets\Scripts\oterScripts\TrailView.cs" />
     <Compile Include="Assets\UpdateManager\Example Scene\Scripts\Cloner.cs" />
     <Compile Include="Assets\UpdateManager\Example Scene\Scripts\Counter.cs" />
     <Compile Include="Assets\UpdateManager\Example Scene\Scripts\ExampleEventUpdate.cs" />
@@ -136,7 +159,28 @@
     <Compile Include="Assets\UpdateManager\Scripts\OverridableMonoBehaviour.cs" />
     <Compile Include="Assets\UpdateManager\Scripts\UpdateManager.cs" />
     <Compile Include="Assets\UpdateManager\Scripts\Utility\Singleton.cs" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\UpdateManager\READ ME.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/lessens/2019.4.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -313,6 +357,9 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:/lessens/2019.4.15f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>R:/Projects/Development-of-mobile-2D-games/Development-of-mobile-2D-games/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/lessens/2019.4.15f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
