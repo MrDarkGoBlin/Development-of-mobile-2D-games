@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemsRepository : BaseController, IItemsRepository
+public class ItemsRepository : BaseController, IRepository<int, IItem>
 {
-    public IReadOnlyDictionary<int, IItem> Items => _itemsMapById;
+
+    public IReadOnlyDictionary<int, IItem> Collection => _itemsMapById;
 
     private Dictionary<int, IItem> _itemsMapById = new Dictionary<int, IItem>();
 
@@ -33,12 +34,13 @@ public class ItemsRepository : BaseController, IItemsRepository
     }
     private IItem CreateItem(ItemConfig config)
     {
-        return new Item 
-        { 
-            Id = config.Id, 
-            Info = new ItemInfo { Title = config.Title } 
+        return new Item
+        {
+            Id = config.Id,
+            Info = new ItemInfo { Title = config.Title }
         };
     }
+
 
     
 }

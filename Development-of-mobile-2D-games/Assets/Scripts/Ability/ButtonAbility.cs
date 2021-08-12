@@ -25,7 +25,7 @@ public class ButtonAbility : MonoBehaviour
 
     private void ButtonClick()
     {
-        _abilitiesController.AbilityActive(_abilityType);
+        Debug.Log("AbilityClick");
     }
 
 }

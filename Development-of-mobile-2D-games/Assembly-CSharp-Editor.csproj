@@ -64,6 +64,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Editor\CustomButtonEditor.cs" />
+    <Compile Include="Assets\Scripts\Editor\CustomSliderEditor.cs" />
     <Compile Include="Assets\UpdateManager\Example Scene\Scripts\Editor\ClonerEditor.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/lessens/2019.4.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -262,6 +264,15 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>R:/Projects/Development-of-mobile-2D-games/Development-of-mobile-2D-games/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>R:/Projects/Development-of-mobile-2D-games/Development-of-mobile-2D-games/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenUpgradeManager">
+      <HintPath>R:/Projects/Development-of-mobile-2D-games/Development-of-mobile-2D-games/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenUpgradeManager.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>R:/Projects/Development-of-mobile-2D-games/Development-of-mobile-2D-games/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

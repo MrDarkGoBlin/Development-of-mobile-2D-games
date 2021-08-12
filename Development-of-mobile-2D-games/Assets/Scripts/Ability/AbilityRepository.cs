@@ -26,19 +26,19 @@ public class AbilityRepository : IRepository<int, IAbility>
         {
             case AbilityType.None:
                 return null;
-                break;
+
             case AbilityType.Gun:
                 return new GunAbility(config);
-                break;
+                
             case AbilityType.Acceleration:
                 return null;
-                break;
+
             case AbilityType.Oil:
                 return null;
-                break;
+
             default:
                 return null;
-                break;
+
         }
     }
     public IReadOnlyDictionary<int, IAbility> Collection => _abilityMapById;
