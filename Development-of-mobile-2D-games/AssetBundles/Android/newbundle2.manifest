@@ -1,0 +1,116 @@
+ManifestFileVersion: 0
+CRC: 303276307
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4672657320438d862acb6aa2dfe060da
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 17b2ae25358486f046a9ef3035cfa428
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 50
+  Script: {instanceID: 0}
+- Class: 58
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 96
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: cd65c630ee54b744bb110d9788e8f97c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 290caf30c3c621f4ca8fd0164f6e7f43, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9c9c38501308b514f8bf475363aecaca, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a10fe52170aceca4ca31990a22647061, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a77759a148eab2b45945daf8d2ac23a3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b9651ff2061f7774a8cdb1ef88a42243, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4c411e13b6779244a85775d04f9212a3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6c82b85597e0b9846ac47e3738861e51, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 00c3c865782347f41b6358d9fba14b48, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 85bf3be603548374ca46f521a3aa7fda, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71398ce7fbc3a5b4fa50b50bd54317a7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 226f7d68b7faaac43b4e2970a0b4f524, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 89111f2a69b8fcf4e87b0b833e00d162, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7e5ce53a129f4d34089e73e69791bc38, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e9433f5b80c15fd46a051d109413b420, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 46e7651c82efa4341a740c4f4384917a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a813e52dc7f08fe4092168424f706cf7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a0bb6ddf41becd147a5d013721c5b216, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Prefabs/endlessMove.prefab
+- Assets/Resources/Prefabs/RewardWindow.prefab
+- Assets/Resources/Prefabs/MobileSingleStickControl.prefab
+- Assets/Resources/Prefabs/InventoryView.prefab
+- Assets/Resources/Prefabs/StartFightView.prefab
+- Assets/Resources/Prefabs/background.prefab
+- Assets/Resources/Prefabs/CurrencyWindow.prefab
+- Assets/Resources/Prefabs/CannonBomb.prefab
+- Assets/Resources/Prefabs/AbilityCollectionView.prefab
+- Assets/Resources/Prefabs/FightView.prefab
+- Assets/Resources/Prefabs/mainMenu.prefab
+- Assets/Resources/Prefabs/Trail.prefab
+- Assets/Resources/Prefabs/Car.prefab
+Dependencies: []

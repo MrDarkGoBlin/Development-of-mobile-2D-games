@@ -6,8 +6,9 @@ using UnityEngine;
 public class MainController : BaseController
 {
     public MainController(Transform placeForUi, ProfilePlayer profilePlayer,
-        DailyRewardView dailyRewardView, StartFightView startFightView, FightWindowView fightWindowView, CurrencyView currencyView)
+        DailyRewardView dailyRewardView, StartFightView startFightView, FightWindowView fightWindowView, CurrencyView currencyView, Dictionary<string, GameObject> prefabs)
     {
+        _prefabs = prefabs;
         _profilePlayer = profilePlayer;
         _placeForUi = placeForUi;
         OnChangeGameState(_profilePlayer.CurrentState.Value);
@@ -24,6 +25,7 @@ public class MainController : BaseController
     private DailyRewardController _dailyRewardController;
     private StartFightController _startFightController;
     private FightWindowController _fightWindowController;
+    private Dictionary<string, GameObject> _prefabs;
 
     private readonly Transform _placeForUi;
     private readonly ProfilePlayer _profilePlayer;
@@ -44,7 +46,7 @@ public class MainController : BaseController
         switch (state)
         {
             case GameState.Start:
-                _mainMenuController = new MainMenuController(_placeForUi, _profilePlayer);
+                _mainMenuController = new MainMenuController(_placeForUi, _profilePlayer, _prefabs["mainMenu"]);
                 _gameController?.Dispose();
                 break;
 
@@ -58,7 +60,7 @@ public class MainController : BaseController
 
             case GameState.DailyReward:
                 AllClear();
-                _dailyRewardController = new DailyRewardController(_placeForUi, _profilePlayer, _dailyRewardView, _currencyView);
+                _dailyRewardController = new DailyRewardController(_placeForUi, _profilePlayer, _prefabs["RewardWindow"], _prefabs["CurrencyWindow"]);
                 _dailyRewardController.RefrashView();
                 break;
 

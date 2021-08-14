@@ -19,16 +19,16 @@ public class DailyRewardController : BaseController
     private float _fillAmount = 0;
     private int _currentDay = 0;
 
-    public DailyRewardController(Transform placeForUI , ProfilePlayer profilePlayer, DailyRewardView dailyRewardView, CurrencyView currencyView)
+    public DailyRewardController(Transform placeForUI , ProfilePlayer profilePlayer, GameObject dailyRewardView, GameObject currencyView)
     {
         _profilePlayer = profilePlayer;
-        _dailyRewardView = Object.Instantiate(dailyRewardView, placeForUI);
+        _dailyRewardView = Object.Instantiate(dailyRewardView, placeForUI).GetComponent<DailyRewardView>();
         AddGameObject(_dailyRewardView.gameObject);
         _currencyController = new CurrencyController(placeForUI, currencyView);
         AddController(_currencyController);
         SubscribeButtons();
         _nextRewardTimer = _dailyRewardView.TimeCooldown;
-        _currencyView = currencyView;
+        _currencyView = currencyView.GetComponent<CurrencyView>();
         _saveinformation = new Saveinformation();
     }
 

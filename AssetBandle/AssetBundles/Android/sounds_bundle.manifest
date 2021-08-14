@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2928280189
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1f5eda4542774c8cd0b803554114beca
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3f7d0c5e0986ec71841622bcb2f9be1c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+Assets:
+- Assets/Audio/CalliSound.mp3
+Dependencies: []
