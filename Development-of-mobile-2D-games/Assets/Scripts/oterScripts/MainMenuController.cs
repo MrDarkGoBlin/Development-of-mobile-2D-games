@@ -11,9 +11,11 @@ namespace Ui
         private readonly ResourcePath _viewPath = new ResourcePath() { PathResource = "Prefabs/MainMenu" };
         private readonly ProfilePlayer _playerProfiler;
         private readonly MainMenuView _mainMenuView;
+        private readonly GameObject _gameObject;
 
-        public MainMenuController(Transform placeForUI, ProfilePlayer profilePlayer)
+        public MainMenuController(Transform placeForUI, ProfilePlayer profilePlayer, GameObject gameObject)
         {
+            _gameObject = gameObject;
             _playerProfiler = profilePlayer;
             _mainMenuView = LoadView(placeForUI);
             _mainMenuView.Init(StartGame, DailyReward);
@@ -58,7 +60,7 @@ namespace Ui
         }
         private MainMenuView LoadView(Transform placeForUI)
         {
-            var objectMainMenu = Object.Instantiate(ResourceLoader.LoadPrefabs(_viewPath), placeForUI);
+            var objectMainMenu = Object.Instantiate(_gameObject, placeForUI);
             AddGameObject(objectMainMenu);
 
             return objectMainMenu.GetComponent<MainMenuView>();

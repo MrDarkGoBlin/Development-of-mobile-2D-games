@@ -325,6 +325,45 @@ MonoBehaviour:
     type: 3}
   _currencyView: {fileID: 3865555281175684112, guid: af43bab778c011e479873957fdaab475,
     type: 3}
+  UrlAssetBundlePrefabs: https://drive.google.com/uc?export=download&id=1RRXNf4kGWnc6mtaNAO5lgLx9ua_i9KIs
+  _dataPrefabsBundles:
+  - NameAssetBundle: AbilityCollectionView
+    Prefabs: {fileID: 487425934402598878, guid: 9e38efd808f25574f83584778b28ae24,
+      type: 3}
+  - NameAssetBundle: background
+    Prefabs: {fileID: 2807479611546755954, guid: fc5d978739b1ef048bfa075070aeba34,
+      type: 3}
+  - NameAssetBundle: CannonBomb
+    Prefabs: {fileID: 4053592497838757858, guid: 44eb27282cac35e4bbc56d3fd9cc795e,
+      type: 3}
+  - NameAssetBundle: Car
+    Prefabs: {fileID: 7951267984111405525, guid: 33b765fecc0a5e84d8c2a5aee1c58341,
+      type: 3}
+  - NameAssetBundle: CurrencyWindow
+    Prefabs: {fileID: 0}
+  - NameAssetBundle: endlessMove
+    Prefabs: {fileID: 748278768431819595, guid: f2bd873027e9fc54f92644eae49e252d,
+      type: 3}
+  - NameAssetBundle: FightView
+    Prefabs: {fileID: 1867830646150042549, guid: a8fcc11ace9a05f4c87f74fe2e1d1c0b,
+      type: 3}
+  - NameAssetBundle: InventoryView
+    Prefabs: {fileID: 4668750241842616169, guid: 39d36855e65f4374087de496a3a6c6b4,
+      type: 3}
+  - NameAssetBundle: mainMenu
+    Prefabs: {fileID: 6015533690559672758, guid: f73b5ceaabd6ca94b894ab0f3d4f7577,
+      type: 3}
+  - NameAssetBundle: MobileSingleStickControl
+    Prefabs: {fileID: 100000, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 3}
+  - NameAssetBundle: RewardWindow
+    Prefabs: {fileID: 3034790724115454430, guid: b4f35ee2bc21a6845ac9407516c1cd80,
+      type: 3}
+  - NameAssetBundle: StartFightView
+    Prefabs: {fileID: 9042168905540031094, guid: ab0d7955f6c31e043b1ecc7af057f658,
+      type: 3}
+  - NameAssetBundle: Trail
+    Prefabs: {fileID: 3501283199557200731, guid: b4a714cbe4c44d9429ffd7f9445be556,
+      type: 3}
   _itemsConfig:
   - {fileID: 11400000, guid: 68034a3d9a64be743aea2e9a59c3787c, type: 2}
   - {fileID: 11400000, guid: 1f71d4f581053f244af4354a1cc09019, type: 2}

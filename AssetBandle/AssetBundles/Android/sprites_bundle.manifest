@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 93223022
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 249ecc41117605a48f4b2fb2de97a71a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c90fc19e2679e5295d10bd00f33cb4c3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/UniversalIconBronze/Textures/Icons/Frost_Spell_01.png
+- Assets/UniversalIconBronze/Textures/Icons/Fire_Spell_01.png
+- Assets/UniversalIconBronze/Textures/Icons/Fantasy_Spell_06.png
+Dependencies: []
