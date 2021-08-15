@@ -11,6 +11,7 @@ namespace Ui
         private readonly ResourcePath _viewPath = new ResourcePath() { PathResource = "Prefabs/MainMenu" };
         private readonly ProfilePlayer _playerProfiler;
         private readonly MainMenuView _mainMenuView;
+        private readonly Localization _localization;
         private readonly GameObject _gameObject;
 
         public MainMenuController(Transform placeForUI, ProfilePlayer profilePlayer, GameObject gameObject)
@@ -19,6 +20,8 @@ namespace Ui
             _playerProfiler = profilePlayer;
             _mainMenuView = LoadView(placeForUI);
             _mainMenuView.Init(StartGame, DailyReward);
+            _localization = new Localization(_mainMenuView.RusButton, _mainMenuView.EngButton);
+            _localization.Start();
             var trarlController = new TrailController();
             AddController(trarlController);
             Advertisement.AddListener(_playerProfiler.AdsListener);
@@ -77,6 +80,7 @@ namespace Ui
         protected override void OnDispose()
         {
             _playerProfiler.CurrentState.Value = GameState.Game;
+            _localization.OnDestroy();
 
             Advertisement.RemoveListener(_playerProfiler.AdsListener);
 
