@@ -13,6 +13,13 @@ namespace Ui
         private Button _buttonReward;
         [SerializeField]
         private Button _buttonExit;
+        [SerializeField]
+        private Button _rusButton;
+        [SerializeField]
+        private Button _engButton;
+
+        public Button RusButton => _rusButton;
+        public Button EngButton  => _engButton; 
 
         public void Init(UnityAction startGame, UnityAction dailyReward)
         {

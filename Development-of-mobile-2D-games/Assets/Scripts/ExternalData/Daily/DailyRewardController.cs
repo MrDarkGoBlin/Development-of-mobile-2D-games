@@ -13,6 +13,7 @@ public class DailyRewardController : BaseController
     private List<ContainerSlotRewardView> _containerSlotRewardViews = new List<ContainerSlotRewardView>();
     private CurrencyController _currencyController;
     private ProfilePlayer _profilePlayer;
+    private NotificationView _notificationView;
 
     private float _nextRewardTimer;
     private float _speedFillAmount = 0.5f;
@@ -30,6 +31,7 @@ public class DailyRewardController : BaseController
         _nextRewardTimer = _dailyRewardView.TimeCooldown;
         _currencyView = currencyView.GetComponent<CurrencyView>();
         _saveinformation = new Saveinformation();
+        _notificationView = new NotificationView();
     }
 
     private void SubscribeButtons()
@@ -141,6 +143,7 @@ public class DailyRewardController : BaseController
 
     private void CheckReward()
     {
+        _notificationView.CreatNotification();
             for (int i = 0; i < _containerSlotRewardViews.Count; i++)
             {
                 if (_containerSlotRewardViews[i].IsActive)
